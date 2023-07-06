@@ -1,0 +1,70 @@
+    1  whoami
+    2  cd
+    3  pwd
+    4  cd /etc/
+    5  pwd
+    6  exit
+    7  pwd
+    8  clear
+    9  hostname ansiblehost
+   10  exit
+   11  clear
+   12  ls -lrt
+   13  pwd
+   14  which ansible
+   15  ansible
+   16  apt install ansible 
+   17  apt update
+   18  apt install ansible 
+   19  which ansible
+   20  ansible --version
+   21  ls -lrt /usr/bin/ansible*
+   22  history
+   23  clear
+   24  history
+   25  pwd
+   26  touch inventory
+   27  vi inventory 
+   28  cat inventory 
+   29  ansible -i inventory all -m ping --user=root -k
+   30  apt install sshpass 
+   31  ansible -i inventory all -m ping --user=root -k
+   32  ansible -i inventory all -m ping
+   33  ssh-keygen
+   34  cd
+   35  cd ..s
+   36  cd .ssh/
+   37  ls -lrt
+   38  cat id_rsa.pub 
+   39  cd
+   40  ls -lrt
+   41  ansible -i inventory all -m ping
+   42  pwd
+   43  cd .ssh/
+   44  ls -lrt
+   45  rm -rf id_rsa.pub 
+   46  >id_rsa 
+   47  vi id_rsa 
+   48  cd
+   49  clear
+   50  ls -lrt
+   51  cd 
+   52  cd /etc/
+   53  ls -lrt
+   54  cd
+   55  ls -lrt
+   56  pwd
+   57  ansible -i inventory all -m ping
+   58  chmod 400 .ssh/id_rsa 
+   59  ansible -i inventory all -m ping
+   60  cd .ssq
+   61  cd .ssh
+   62  ls -lrt
+   63  rm -rf id_rsa 
+   64  ssh-keygen
+   65  cat id_rsa.pub 
+   66  cd
+   67  clear
+   68  ls -lrt
+   69  ansible -i inventory all -m ping
+   70  history
