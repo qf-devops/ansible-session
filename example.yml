@@ -1,0 +1,16 @@
+#ansible -i inventory.yml all -m file -a "path=/tmp/a.txt state=touch"
+---
+- hosts: all
+  tasks:
+  - name: exeute ping command
+    ping:
+  - name: exeute setup command
+    setup:
+  - name: create a direcotry
+    file:
+      path: /tmp/abcdir
+      state: directory
+  - name: create a file
+    file:
+      path: /tmp/abcdir/a.txt
+      state: touch

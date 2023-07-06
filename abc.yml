@@ -1,0 +1,14 @@
+map
+list
+
+key: value
+name: ravi
+course: ansible
+courses:
+  - ansible
+  - puppet
+  - saltstack
+  - chef
+fruits:
+  - banana
+  - apple
