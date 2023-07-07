@@ -6,5 +6,5 @@
 4. install jdk and dotnet with different roles in ansible
 5. maven install with jdk dependency --> ansible
 
-ansible-galaxy
+explore ansible-galaxy
 
