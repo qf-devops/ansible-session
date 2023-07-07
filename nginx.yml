@@ -5,7 +5,7 @@
   tasks:
   - name: setup apt repo
     apt_repository:
-      repo: ppa:nginx/stable
+      repo: ppa:ondrej/nginx
   - name: install nginx package
     apt:
       name: "{{ packagename }}"
