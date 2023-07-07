@@ -160,6 +160,7 @@
   151  ansible-playbook -i inventory.yml nginx.yml 
   152  cleaer
   153  ls -lrt
+  
   154  clear
   155  pwd
   156  ls -lrt
