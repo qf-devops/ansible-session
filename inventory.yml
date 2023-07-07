@@ -1,13 +1,13 @@
 all:
   children:
     webservergroup:
-    children:
-      webservers1:
-        hosts:
-          172.31.17.146:
-      webservers2:
-        hosts:
-          172.31.17.147:
+      children:
+        webservers1:
+          hosts:
+            172.31.17.146:
+        webservers2:
+          hosts:
+            172.31.17.147:
     localserver:
       hosts:
         localhost:
