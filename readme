@@ -1,1 +1,5 @@
 ansible-playbook -i dev/inventory.yml nginx.yml -vvvvv
+
+ ansible -i inventory.yml localserver -m apt -a "name=tree" -e "ansible_connection=local"
+
+ ansible-playbook -i inventory.yml site.yml
