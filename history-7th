@@ -1,0 +1,142 @@
+    1  whoami
+    2  cd
+    3  pwd
+    4  cd /etc/
+    5  pwd
+    6  exit
+    7  pwd
+    8  clear
+    9  hostname ansiblehost
+   10  exit
+   11  clear
+   12  ls -lrt
+   13  pwd
+   14  which ansible
+   15  ansible
+   16  apt install ansible 
+   17  apt update
+   18  apt install ansible 
+   19  which ansible
+   20  ansible --version
+   21  ls -lrt /usr/bin/ansible*
+   22  history
+   23  clear
+   24  history
+   25  pwd
+   26  touch inventory
+   27  vi inventory 
+   28  cat inventory 
+   29  ansible -i inventory all -m ping --user=root -k
+   30  apt install sshpass 
+   31  ansible -i inventory all -m ping --user=root -k
+   32  ansible -i inventory all -m ping
+   33  ssh-keygen
+   34  cd
+   35  cd ..s
+   36  cd .ssh/
+   37  ls -lrt
+   38  cat id_rsa.pub 
+   39  cd
+   40  ls -lrt
+   41  ansible -i inventory all -m ping
+   42  pwd
+   43  cd .ssh/
+   44  ls -lrt
+   45  rm -rf id_rsa.pub 
+   46  >id_rsa 
+   47  vi id_rsa 
+   48  cd
+   49  clear
+   50  ls -lrt
+   51  cd 
+   52  cd /etc/
+   53  ls -lrt
+   54  cd
+   55  ls -lrt
+   56  pwd
+   57  ansible -i inventory all -m ping
+   58  chmod 400 .ssh/id_rsa 
+   59  ansible -i inventory all -m ping
+   60  cd .ssq
+   61  cd .ssh
+   62  ls -lrt
+   63  rm -rf id_rsa 
+   64  ssh-keygen
+   65  cat id_rsa.pub 
+   66  cd
+   67  clear
+   68  ls -lrt
+   69  ansible -i inventory all -m ping
+   70  history
+   71  clear
+   72  ls -lrt
+   73  cat inventory 
+   74  mv inventory inventory.yml
+   75  vi inventory.yml 
+   76  ansible -i inventory.yml -m ping
+   77  clear
+   78  ansible -i inventory.yml webservers -m ping
+   79  ansible -i inventory.yml localserver-m ping
+   80  ansible -i inventory.yml localserver -m ping
+   81  clear
+   82  ansible -i inventory.yml localserver -m ping
+   83  cat inventory.yml 
+   84  vi inventory.yml 
+   85  ansible -i inventory.yml localserver -m ping
+   86  vi inventory.yml 
+   87  ansible -i inventory.yml localserver -m ping
+   88  pwd
+   89  cat .ssh/authorized_keys 
+   90  clear
+   91  cat inventory.yml 
+   92  ansible -i inventory.yml all -m ping
+   93  ansible -i inventory.yml all -m setup
+   94  clear
+   95  ls -lrt
+   96  ansible -i inventory.yml all -m file -a "path=/tmp/a.txt state=touch"
+   97  ls -lrt /tmp/
+   98  cler
+   99  clear
+  100  touch example.yml
+  101  vi example.yml 
+  102  ansible-playbook -i inventory.yml example.yml 
+  103  vi example.yml 
+  104  ansible-playbook -i inventory.yml example.yml 
+  105  ansible-playbook -i inventory.yml example.yml -v
+  106  ansible-playbook -i inventory.yml example.yml -vv
+  107  ansible-playbook -i inventory.yml example.yml -vvv
+  108  ansible-playbook -i inventory.yml example.yml -vvvvv
+  109  ansib
+  110  pwds
+  111  pwqds
+  112  pwd
+  113  cd /etc/ansible
+  114  find / ansible.cfg 
+  115  find / -name ansible.cfg 
+  116  vi /usr/lib/python3/dist-packages/ansible_test/_data/ansible.cfg
+  117  cat /usr/lib/python3/dist-packages/ansible/galaxy/data/container/tests/ansible.cfg
+  118  pwd
+  119  find / -name ansible.log
+  120  ls -lrt
+  121  cat example.yml 
+  122  clear
+  123  pwd
+  124  ls -lrt
+  125  gi clone https://github.com/qf-devops/ansible-session.git
+  126  git clone https://github.com/qf-devops/ansible-session.git
+  127  cd ansible-session/
+  128  ls -lrt
+  129  clear
+  130  ls -lrt
+  131  ansible-playbook -i inventory.yml nginx.yml --syntax-check
+  132  #ansible-playbook -i inventory.yml nginx.yml 
+  133  ansible-playbook --help
+  134  #ansible-playbook -i inventory.yml nginx.yml --check
+  135  ansible-playbook -i inventory.yml nginx.yml --check
+  136  cat inventory.yml 
+  137  git pull
+  138  ansible-playbook -i inventory.yml nginx.yml --check
+  139  ansible-playbook -i inventory.yml nginx.yml 
+  140  git pull
+  141  ansible-playbook -i inventory.yml nginx.yml 
+  142  history
