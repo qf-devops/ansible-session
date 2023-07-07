@@ -140,3 +140,96 @@
   140  git pull
   141  ansible-playbook -i inventory.yml nginx.yml 
   142  history
+ 134  #ansible-playbook -i inventory.yml nginx.yml --check
+  135  ansible-playbook -i inventory.yml nginx.yml --check
+  136  cat inventory.yml 
+  137  git pull
+  138  ansible-playbook -i inventory.yml nginx.yml --check
+  139  ansible-playbook -i inventory.yml nginx.yml 
+  140  git pull
+  141  ansible-playbook -i inventory.yml nginx.yml 
+  142  history
+  143  cler
+  144  clear
+  145  cat ~/.ssh/id_rsa.pub 
+  146  ls -lrt
+  147  git pull
+  148  clear
+  149  ansible-playbook -i inventory.yml nginx.yml 
+  150  vi files/index.html 
+  151  ansible-playbook -i inventory.yml nginx.yml 
+  152  cleaer
+  153  ls -lrt
+  154  clear
+  155  pwd
+  156  ls -lrt
+  157  mkdir roles
+  158  cd roles/
+  159  ls -lr
+  160  ansible-galaxy init nginx
+  161  ls -lrt
+  162  tree nginx/
+  163  cd ..
+  164  ls -lrt
+  165  cat inventory.yml 
+  166  ansible -i inventory.yml localserver -m apt -a "name=tree"
+  167  ansible -i inventory.yml localserver -m apt -a "name=tree" --ansible_connection=local
+  168  ansible -i inventory.yml localserver --ansible_connection=local  -m apt -a "name=tree"
+  169  ansible -i inventory.yml localserver -m apt -a "name=tree" -e "ansible_connection=local"
+  170  tree roles/nginx/
+  171  ls lrt
+  172  clear
+  173  pwd
+  174  cd roles/
+  175  cd nginx/
+  176  cd tasks/
+  177  ls -lrt
+  178  vi main.yml 
+  179  cd ../
+  180  cd handlers/
+  181  vi main.yml 
+  182  cd ../
+  183  cd vars/
+  184  vi main.yml 
+  185  cd ..
+  186  ls -lrt
+  187  mkdir files
+  188  cp ../../files/* .
+  189  ls -lrt
+  190  mv index.html tutorial files/
+  191  clear
+  192  ls -lrt
+  193  cd defaults/
+  194  cd m
+  195  ls -0lrt
+  196  ls -lrt
+  197  vi main.yml 
+  198  cd ../../
+  199  pwd
+  200  ls -lr
+  201  ls -lrt
+  202  cd ..
+  203  ls -lrt
+  204  pwd
+  205  ls -lrt
+  206  cat nginx.yml 
+  207  cp nginx.yml site.ym l
+  208  cp nginx.yml site.yml
+  209  ls -lrt
+  210  vi site.yml 
+  211  clear
+  212  ansible-playbook -i inventory.yml site.yml 
+  213  ls -lr
+  214  git status
+  215  git add .
+  216  git commit -m "updayed ith roles"
+  217  git push 
+  218  git remote -v
+  219  git remote add origin git@github.com:qf-devops/ansible-session.git
+  220  git remote rm origin
+  221  git remote add origin git@github.com:qf-devops/ansible-session.git
+  222  git push
+  223  git push --set-upstream origin main
+  224  cat ~/.ssh/id_rsa.pub 
+  225  git push --set-upstream origin main
+  226  history
