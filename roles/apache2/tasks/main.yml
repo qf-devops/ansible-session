@@ -1,0 +1,23 @@
+---
+- name: setup apt repo
+  apt_repository:
+    repo: ppa:ondrej/nginx
+- name: install apache2 package
+  apt:
+    name: "{{ packagename }}"
+    state: latest
+- name: copy index file to tutorial dir
+  copy:
+    src: index.html
+    dest: /var/www/html/index.html
+  notify: restart apache2 server
+- name: copy tutorial file to /etc/apache2/ports.conf
+  copy:
+    src: ports.conf
+    dest: /etc/apache2/ports.conf
+  notify: restart apache2 server
+- name: start apache2 server
+  service:
+    name: "{{ packagename }}"
+    state: started
+    enabled: yes
