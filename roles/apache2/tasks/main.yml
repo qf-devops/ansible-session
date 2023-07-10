@@ -26,3 +26,6 @@
     name: "{{ packagename }}"
     state: started
     enabled: yes
+- name: debug vars
+  debug:
+    msg: "version value:  {{ version }}"
