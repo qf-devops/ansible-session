@@ -6,12 +6,12 @@
   apt:
     name: "{{ packagename }}"
     state: latest
-- name: copy index file to tutorial dir
+- name: copy index file to html dir
   copy:
     src: index.html
     dest: /var/www/html/index.html
   notify: restart apache2 server
-- name: copy tutorial file to /etc/apache2/ports.conf
+- name: copy ports file to /etc/apache2/ports.conf
   copy:
     src: ports.conf
     dest: /etc/apache2/ports.conf
