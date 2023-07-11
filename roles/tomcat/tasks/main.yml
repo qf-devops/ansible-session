@@ -57,3 +57,10 @@
     name: tomcat
     state: started
     enabled: yes
+- name: download war file
+  ansible.builtin.get_url:
+    url: https://github.com/AKSarav/SampleWebApp/raw/master/dist/SampleWebApp.war
+    dest: /opt/tomcat/latest/webapps
+    mode: '0777'
+    owner: tomcat
+  notify: restart tomcat service
