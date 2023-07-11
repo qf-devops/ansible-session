@@ -7,8 +7,30 @@
   file:
     path: /opt/tomcat
     state: directory
+    chmod: 0777
 - name: Added a tomcat user
   ansible.builtin.user:
     name: tomcat
     shell: /bin/false
     home: /opt/tomcat
+# - name: Download foo.conf
+#   ansible.builtin.get_url:
+#     url: https://downloads.apache.org/tomcat/tomcat-10/v10.1.10/bin/apache-tomcat-10.1.10.tar.gz
+#     dest: /tmp/apache-tomcat-10.1.10.tar.gz
+#     mode: '0440'
+- name: Extract pache-tomcat-10.1.10.tar.gz into /opt/tomcat
+  ansible.builtin.unarchive:
+    src: https://downloads.apache.org/tomcat/tomcat-10/v10.1.10/bin/apache-tomcat-10.1.10.tar.gz
+    dest: /opt/tomcat/apache-tomcat-10.1.10
+    remote_src: true
+- name: Create a symbolic link for tomcat
+  file:
+    src: /opt/tomcat/apache-tomcat-10.1.10
+    dest: /opt/tomcat/latest
+    owner: tomcat
+    state: link
+- name: Change file ownership, group and permissions
+  file:
+    path: /opt/tomcat/latest/bin/*.sh
+    owner: tomcat
+    mode: '0100'
