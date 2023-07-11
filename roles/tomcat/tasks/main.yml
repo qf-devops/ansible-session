@@ -32,6 +32,9 @@
     state: link
 - name: Change file ownership, group and permissions
   file:
-    path: /opt/tomcat/latest/bin/*.sh
+    path: "{{ item }}"
     owner: tomcat
     mode: '0100'
+  with_items:
+  - "/opt/tomcat/latest/bin/startup.sh"
+  - "/opt/tomcat/latest/bin/shutdown.sh"
