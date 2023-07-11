@@ -1,0 +1,14 @@
+---
+- name: install jdk
+  apt:
+    name: openjdk-11-jdk-headless
+    state: present
+- name: create tomcat dir
+  file:
+    path: /opt/tomcat
+    state: directory
+- name: Added a tomcat user
+  ansible.builtin.user:
+    name: tomcat
+    shell: /bin/false
+    home: /opt/tomcat
