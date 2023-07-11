@@ -34,7 +34,7 @@
   file:
     path: "{{ item }}"
     owner: tomcat
-    mode: '0100'
+    mode: '0777'
   with_items:
   - "/opt/tomcat/latest/bin/startup.sh"
   - "/opt/tomcat/latest/bin/shutdown.sh"
