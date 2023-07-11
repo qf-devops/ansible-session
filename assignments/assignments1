@@ -1,0 +1,28 @@
+
+1. ngix as a role with ansible playbook.
+2. install docker in ec2 with ansible role 
+3. run nginx docker conatiner in ec2 using ansible playbook:
+    docker run -itd -p 80:80 --name=n1 nginx
+4. install jdk and dotnet with different roles in ansible
+5. maven install with jdk dependency --> ansible
+
+explore ansible-galaxy
+
+
+
+
+steps:
+
+https://www.jenkins.io/doc/book/installing/linux/
+
+1. add key
+curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
+  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+2. add repo
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+3. update repo
+sudo apt-get update
+4. install package
+sudo apt-get install jenkins
