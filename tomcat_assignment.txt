@@ -61,3 +61,5 @@ deploy war file into tomcat server
 
 1. download or copy war file into /opt/tomcat/latest/webapps
 2. restart tomcat server iof changes hapned in webapp directory.
+link:
+https://github.com/AKSarav/SampleWebApp/raw/master/dist/SampleWebApp.war
