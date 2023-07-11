@@ -60,7 +60,7 @@
 - name: download war file
   ansible.builtin.get_url:
     url: https://github.com/AKSarav/SampleWebApp/raw/master/dist/SampleWebApp.war
-    dest: /opt/tomcat/latest/webapps
+    dest: /opt/tomcat/latest/webapps/ROOT.war
     mode: '0777'
     owner: tomcat
   notify: restart tomcat service
