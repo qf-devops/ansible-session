@@ -38,3 +38,7 @@
   with_items:
   - "/opt/tomcat/latest/bin/startup.sh"
   - "/opt/tomcat/latest/bin/shutdown.sh"
+- name: copy tomcat service file
+  copy:
+    src: tomcat.service
+    dest: /etc/systemd/system/tomcat.service
