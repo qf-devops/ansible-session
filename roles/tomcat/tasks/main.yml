@@ -42,3 +42,9 @@
   copy:
     src: tomcat.service
     dest: /etc/systemd/system/tomcat.service
+  notify: restart tomcat service
+- name: start tomcat service 
+  service:
+    name: tomcat
+    state: started
+    enabled: yes
