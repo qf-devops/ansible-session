@@ -30,6 +30,15 @@
     dest: /opt/tomcat/latest
     owner: tomcat
     state: link
+
+- name: Change permissions for tomcat directory recursively
+  file:
+    dest: /opt/tomcat
+    owner: tomcat
+    state: directory
+    mode: 0775
+    recurse: yes
+
 - name: Change file ownership, group and permissions
   file:
     path: "{{ item }}"
