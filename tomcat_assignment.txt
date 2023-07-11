@@ -1,0 +1,58 @@
+1.install jdk
+sudo apt update
+sudo apt install openjdk-11-jdk
+
+
+2. create a user:
+ sudo useradd -m -U -d /opt/tomcat -s /bin/false tomcat
+
+3. downlaod this file from tomcat site:
+  VERSION=10.1.4
+  wget https://www-eu.apache.org/dist/tomcat/tomcat-10/v${VERSION}/bin/apache-tomcat-${VERSION}.tar.gz -P /tmp
+4. create softlink:
+    sudo ln -s /opt/tomcat/apache-tomcat-${VERSION} /opt/tomcat/latest
+5. provide permission for tomcat dofrectory:
+    sudo chown -R tomcat: /opt/tomcat
+6. chnage executable permissions:
+   sudo sh -c 'chmod +x /opt/tomcat/latest/bin/*.sh'
+
+7. crteate systemd service file 
+  sudo nano /etc/systemd/system/tomcat.service
+----------
+[Unit]
+Description=Tomcat 10 servlet container
+After=network.target
+
+[Service]
+Type=forking
+
+User=tomcat
+Group=tomcat
+
+Environment="JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64"
+Environment="JAVA_OPTS=-Djava.security.egd=file:///dev/urandom -Djava.awt.headless=true"
+
+Environment="CATALINA_BASE=/opt/tomcat/latest"
+Environment="CATALINA_HOME=/opt/tomcat/latest"
+Environment="CATALINA_PID=/opt/tomcat/latest/temp/tomcat.pid"
+Environment="CATALINA_OPTS=-Xms512M -Xmx1024M -server -XX:+UseParallelGC"
+
+ExecStart=/opt/tomcat/latest/bin/startup.sh
+ExecStop=/opt/tomcat/latest/bin/shutdown.sh
+
+[Install]
+WantedBy=multi-user.target
+
+-----
+8. reload the service
+  sudo systemctl daemon-reload
+
+9. enable the tomcat service
+  sudo systemctl enable --now tomcat
+
+10 . service operations 
+    sudo systemctl start tomcat
+   sudo systemctl stop tomcat
+   sudo systemctl restart tomcat
+
+
