@@ -3,16 +3,17 @@
   apt:
     name: openjdk-11-jdk-headless
     state: present
-- name: create tomcat dir
-  file:
-    path: /opt/tomcat
-    state: directory
-    chmod: 0777
+# - name: create tomcat dir
+#   file:
+#     path: /opt/tomcat
+#     state: directory
+
 - name: Added a tomcat user
   ansible.builtin.user:
     name: tomcat
     shell: /bin/false
     home: /opt/tomcat
+
 # - name: Download foo.conf
 #   ansible.builtin.get_url:
 #     url: https://downloads.apache.org/tomcat/tomcat-10/v10.1.10/bin/apache-tomcat-10.1.10.tar.gz
