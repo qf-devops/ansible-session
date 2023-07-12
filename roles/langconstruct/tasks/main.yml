@@ -20,3 +20,7 @@
     - name: debug
       debug:
         msg: handling exceptiopns using rescue block.
+    - name: dummy file
+      file:
+        path: /tmp/abc.txt
+        state: touch 
