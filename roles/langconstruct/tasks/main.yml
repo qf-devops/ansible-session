@@ -8,6 +8,7 @@
     - nginx
     - gfgfg
   ignore_errors: true
+- name: set a block
   block:
     - name: copy file
       copy:
