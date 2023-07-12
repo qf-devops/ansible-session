@@ -1,25 +1,15 @@
 ---
-# curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
-#   /usr/share/keyrings/jenkins-keyring.asc > /dev/null
-# echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
-#   https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
-#   /etc/apt/sources.list.d/jenkins.list > /dev/null
-# sudo apt-get update
-# sudo apt-get install jenkins
-# - name: update jenkins apt key
-#   ansible.builtin.apt_key:
-#     url: https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
-#     keyring: /usr/share/keyrings/jenkins-keyring.asc
-#     state: present
 - name: somerepo | no apt key
   ansible.builtin.get_url:
     url: https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
     dest: /usr/share/keyrings/jenkins-keyring.asc
-- name: Add jenkins  repository into sources list using jenkins.list
+
+- name: Add jenkins repository into sources list using jenkins.list
   ansible.builtin.apt_repository:
     repo: "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/"
     state: present
     filename: "/etc/apt/sources.list.d/jenkins.list"
+    
 - name: install jenkins package
   apt:
     name: jenkins
