@@ -28,3 +28,6 @@ sudo apt-get install jenkins
    ignore_erros
    block
    rescue
+
+4. Iterate block of multiple modules with loop/with_items 
+   hint: choose  include_yml option
