@@ -24,3 +24,7 @@ sudo apt-get install jenkins
 3. executuion should continue even apt module failed.
    if copy module and command module failes should control with exception handling(rescue).
    condition for copy, command modules should handled with block statement.
+
+   ignore_erros
+   block
+   rescue
