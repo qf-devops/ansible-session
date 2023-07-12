@@ -17,9 +17,9 @@
     dest: /usr/share/keyrings/jenkins-keyring.asc
 - name: Add jenkins  repository into sources list using jenkins.list
   ansible.builtin.apt_repository:
-    repo: deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary
+    repo: "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/"
     state: present
-    filename: /etc/apt/sources.list.d/jenkins.list 
+    filename: "/etc/apt/sources.list.d/jenkins.list"
 - name: install jenkins package
   apt:
     name: jenkins
