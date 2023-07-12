@@ -8,6 +8,9 @@ all:
         webservers2:
           hosts:
             172.31.17.147:
+        webserver3:
+          hosts:
+            3.145.134.53:
     localserver:
       hosts:
         localhost:
