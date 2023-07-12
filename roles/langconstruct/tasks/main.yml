@@ -4,15 +4,18 @@
     name: "{{ item }}"
     state: latest
   with_items:
-  - tree
-  - nginx
-  - gfgfg
-
-- name: copy file
-  copy:
-    src: abc.txt
-    dest: /tmp/abc.txt
-    
-- name: copy file
-  command:
-   cmd: "ls -lrt /usr/bin"
+    - tree
+    - nginx
+    - gfgfg
+  ignore_errors: true
+  block:
+    - name: copy file
+        copy:
+        src: abc.txt
+        dest: /tmp/abc.txt
+    - name: copy file
+        command:  /bin/false
+  rescue:
+    - name: debug
+      debug:
+        msg: handling exceptiopns using rescue block.
