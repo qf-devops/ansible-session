@@ -20,3 +20,7 @@ sudo apt-get install jenkins
 3. configure ansible installation path in tools dir
 4. prepare ansible command using pipeline syntax with ansible-playbook option.
 5. Ensure playbook execution is success with pipeline.
+
+3. executuion should continue even apt module failed.
+   if copy module and command module failes should control with exception handling(rescue).
+   condition for copy, command modules should handled with block statement.
