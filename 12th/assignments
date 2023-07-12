@@ -11,3 +11,12 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
 sudo apt-get update
 sudo apt-get install jenkins
+
+
+2. run playbookwith jenkinsfile pipeline.
+
+1. use jenkinsfile
+2. install ansible plugin in manage jenkins
+3. configure ansible installation path in tools dir
+4. prepare ansible command using pipeline syntax with ansible-playbook option.
+5. Ensure playbook execution is success with pipeline.
