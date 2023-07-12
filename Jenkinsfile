@@ -2,10 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('git') {
             steps {
-                echo 'Hello World'
-                sh "which ansible"
+               checkout scm
+            }
+        }
+         stage('ansible-playbook') {
+            steps {
+                sh "ansible-playbook -i inventory.yml webserver.yml"
             }
         }
     }
