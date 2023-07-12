@@ -1,0 +1,4 @@
+- hosts: localserver
+  roles:
+    - jdk
+    - jenkins
