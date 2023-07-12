@@ -9,7 +9,7 @@ pipeline {
         }
          stage('ansible-playbook') {
             steps {
-                sh "ansible-playbook -i inventory.yml webserver.yml"
+                ansiblePlaybook become: true, credentialsId: 'root', disableHostKeyChecking: true, installation: 'ansible', inventory: 'inventory.yml', playbook: 'webserver.yml'
             }
         }
     }
