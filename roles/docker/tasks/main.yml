@@ -38,7 +38,7 @@
   pip:
     name: docker
 - name: Include task list in play
-  ansible.builtin.include: containers.yaml
+  ansible.builtin.include: containers.yml
   loop:
   - "{{ services['started'].svc_name }}"
     
