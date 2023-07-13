@@ -5,6 +5,13 @@ all:
         docker_group:
           hosts:
             172.31.38.110:
+          vars:
+            services:
+              started: 
+                - nginx
+                - ubuntu
+                - centos
+                - alpine
         webservers2:
           hosts:
             172.31.17.147:

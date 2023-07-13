@@ -37,3 +37,5 @@ Start docker containers
 Check the status of docker with regsiter paramter in ansible playbook
  docker ps -a
 
+
+run mulitple containers based on vars provided values in vars/extravars.
