@@ -8,7 +8,7 @@
   tasks:
   - name: Install Docker Module for Python
     pip:
-      name: boto3
+      name: boto
   - name: create ec2 instance
     ec2:
       key_name: raviohio
