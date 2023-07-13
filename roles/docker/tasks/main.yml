@@ -24,7 +24,7 @@
   docker_container:
     name: ex1
     image: ubuntu
-    state: present
+    state: started
 
 - name: check the status docker container
   command: docker ps -a
