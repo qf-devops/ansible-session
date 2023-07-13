@@ -11,6 +11,10 @@ all:
                 svc_name:
                 - ubuntu
                 - centos
+              stopped:
+                svc_name:
+                - ubuntu
+                - centos
         webservers2:
           hosts:
             172.31.17.147:

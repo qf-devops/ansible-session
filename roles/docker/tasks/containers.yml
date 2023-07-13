@@ -11,4 +11,4 @@
     name: "{{ item }}"
     image: "{{ item }}"
     command: "{{ default_container_command }}"
-    state: started
+    state: "{{ op_type }}"
