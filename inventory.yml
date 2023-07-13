@@ -2,7 +2,7 @@ all:
   children:
     webservergroup:
       children:
-        docker_group:
+        cloud_host:
           hosts:
             172.31.38.110:
           vars:

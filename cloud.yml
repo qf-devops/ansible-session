@@ -1,0 +1,16 @@
+---
+- hosts: cloud_host
+  vars:
+    st_type: running
+  tasks:
+  - name: create ec2 instance
+    ec2:
+      key_name: raviohio
+      instance_type: t2.micro
+      image: ami-024e6efaf93d85776
+      wait: yes
+      group: webserver
+      count: 1
+      vpc_subnet_id: subnet-09ff655fb2c442ab8
+      assign_public_ip: yes
+      state: "{{ st_type }}"
