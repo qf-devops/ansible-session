@@ -37,5 +37,8 @@
 - name: Install Docker Module for Python
   pip:
     name: docker
-
-- include-playbook: containers.yml
+- name: Include task list in play
+  ansible.builtin.include: containers.yaml
+  loop:
+  - "{{ services[started].svc_name }}"
+    

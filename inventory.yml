@@ -6,8 +6,9 @@ all:
           hosts:
             172.31.38.110:
           vars:
-            services:
-              started: 
+            services: 
+              started:
+                svc_name:
                 - nginx
                 - ubuntu
                 - centos

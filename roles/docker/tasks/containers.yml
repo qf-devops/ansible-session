@@ -1,13 +1,12 @@
 ---
 - name: Pull default Docker image
   community.docker.docker_image:
-    name: "{{ default_container_image }}"
+    name: "{{ item }}"
     source: pull
 
 - name: Create default containers
   community.docker.docker_container:
-    name: "{{ default_container_name }}{{ item }}"
-    image: "{{ default_container_image }}"
+    name: "{{ item }}"
+    image: "{{ item }}"
     command: "{{ default_container_command }}"
     state: started
-  with_sequence: count={{ container_count }}
