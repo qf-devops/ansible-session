@@ -7,8 +7,10 @@ all:
             172.31.38.110:
           vars:
             services: 
-              - ubuntu
-              - centos
+              started:
+                svc_name:
+                - ubuntu
+                - centos
         webservers2:
           hosts:
             172.31.17.147:
