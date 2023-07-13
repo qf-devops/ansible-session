@@ -1,7 +1,7 @@
 ---
 - name: Pull default Docker image
   community.docker.docker_image:
-    name: "{{ item }}"
+    name: ubuntu:latest
     source: pull
 
 - name: Create default containers
