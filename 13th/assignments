@@ -1,0 +1,39 @@
+Scenario1:
+   Multiple nodes can use to deploy single application(one playbook)
+   Hosts: webservers
+
+Scenario2:
+  One group and multiple applications with ansible
+
+multiple playbook
+single playbook
+
+tomcat: 10 modules
+
+web1
+web2
+web3
+
+loop
+
+abc.yml
+mysites.yml
+  abc.yml
+loop:
+  - app1
+  - app2
+  - app3
+
+  docker
+
+
+assignment:
+
+
+Install docker engine
+apt install docker.io -y
+Start docker containers
+  docker run -itd --name=ex1 ubuntu
+Check the status of docker with regsiter paramter in ansible playbook
+ docker ps -a
+
