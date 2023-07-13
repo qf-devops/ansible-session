@@ -1,4 +1,15 @@
 ---
+- name: install required system packages
+  apt:
+    pkg:
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - python3-pip
+      - virtualenv
+      - python3-setuptools
+    state: latest
+    update_cache: true
 - name: install docker package
   apt:
     name: docker.io
@@ -6,7 +17,7 @@
 - name: install docker for python
   pip:
     name: docker
-    
+
 # - name: start docker container
 #   command: docker run -itd --name=ex1 ubuntu
 - name: Create a ex1 container
