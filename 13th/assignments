@@ -50,3 +50,8 @@ auth
 2nd:
   creae key pair
   attach keypait to ec2
+
+
+ansible-vault
+ansible-galaxy
+tags
