@@ -20,6 +20,7 @@
 
 - name: start docker container
   command: docker run -itd --name=ex1 ubuntu
+  ignore_errors: true
 # - name: Create a ex1 container
 #   docker_container:
 #     name: ex1
