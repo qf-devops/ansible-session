@@ -39,3 +39,14 @@ Check the status of docker with regsiter paramter in ansible playbook
 
 
 run mulitple containers based on vars provided values in vars/extravars.
+
+1st:
+create  ec2 instenace using ansible
+ec2
+
+env setup
+auth
+
+2nd:
+  creae key pair
+  attach keypait to ec2
