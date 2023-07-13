@@ -2,7 +2,7 @@ all:
   children:
     webservergroup:
       children:
-        webservers1:
+        docker_group:
           hosts:
             172.31.38.110:
         webservers2:

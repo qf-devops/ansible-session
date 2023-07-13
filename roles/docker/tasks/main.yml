@@ -1,0 +1,10 @@
+---
+- name: install docker package
+  apt:
+    name: docker.io
+    state: latest
+- name: start docker container
+  command: docker run -itd --name=ex1 ubuntu
+
+- name: check the status docker container
+  command: docker ps -a
