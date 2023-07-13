@@ -1,5 +1,8 @@
 ---
-- hosts: localserver
+- name: EC2 Test Example
+  hosts: localhost
+  connection: local
+  gather_facts: False
   vars:
     st_type: running
   tasks:
