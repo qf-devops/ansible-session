@@ -26,4 +26,4 @@
     image: ubuntu
 
 - name: check the status docker container
-  command: docker inspect ex1 | grep "Running"
+  command: docker ps -a
