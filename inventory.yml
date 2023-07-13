@@ -4,7 +4,7 @@ all:
       children:
         docker_group:
           hosts:
-            172.31.38.110:
+            172.31.32.208:
         webservers2:
           hosts:
             172.31.17.147:
