@@ -40,5 +40,5 @@
 - name: Include task list in play
   ansible.builtin.include: containers.yml
   loop:
-  - "{{ services['started'].svc_name }}"
+  - "{{ services }}"
     
