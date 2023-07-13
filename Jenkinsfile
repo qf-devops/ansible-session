@@ -9,7 +9,7 @@ pipeline {
         }
          stage('ansible-playbook') {
             steps {
-                ansiblePlaybook become: true, credentialsId: 'root', disableHostKeyChecking: true, installation: 'ansible', inventory: 'inventory.yml', playbook: 'docker.yml'
+                ansiblePlaybook become: true, credentialsId: 'root', disableHostKeyChecking: true, installation: 'ansible', inventory: 'inventory.yml', playbook: 'docker.yml' -vv
             }
         }
     }
