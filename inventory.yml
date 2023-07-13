@@ -9,10 +9,8 @@ all:
             services: 
               started:
                 svc_name:
-                - nginx
                 - ubuntu
                 - centos
-                - alpine
         webservers2:
           hosts:
             172.31.17.147:
