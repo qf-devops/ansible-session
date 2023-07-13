@@ -1,12 +1,14 @@
 ---
-- name: Pull default Docker image
-  community.docker.docker_image:
-    name: ubuntu:latest
-    source: pull
+- debug:
+    msg: "{{ item }}"
+# - name: Pull default Docker image
+#   community.docker.docker_image:
+#     name: ubuntu:latest
+#     source: pull
 
-- name: Create default containers
-  community.docker.docker_container:
-    name: "{{ item }}"
-    image: "{{ item }}"
-    command: "{{ default_container_command }}"
-    state: started
+# - name: Create default containers
+#   community.docker.docker_container:
+#     name: "{{ item }}"
+#     image: "{{ item }}"
+#     command: "{{ default_container_command }}"
+#     state: started
