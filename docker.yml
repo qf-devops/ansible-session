@@ -1,6 +1,9 @@
 ---
 - hosts: docker_group
   vars: 
-    ansible_python_interpreter: /usr/bin/python3
+    container_count: 1
+    default_container_name: docker
+    default_container_image: ubuntu
+    default_container_command: sleep 1d
   roles:
     - docker

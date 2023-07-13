@@ -1,31 +1,52 @@
 ---
-- name: install required system packages
+- name: Install aptitude
+  apt:
+    name: aptitude
+    state: latest
+    update_cache: true
+
+- name: Install required system packages
   apt:
     pkg:
       - apt-transport-https
       - ca-certificates
       - curl
+      - software-properties-common
       - python3-pip
       - virtualenv
       - python3-setuptools
     state: latest
     update_cache: true
-- name: install docker package
+
+- name: Add Docker GPG apt Key
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+
+- name: Add Docker Repository
+  apt_repository:
+    repo: deb https://download.docker.com/linux/ubuntu jammy stable
+    state: present
+
+- name: Update apt and install docker-ce
   apt:
-    name: docker.io
+    name: docker-ce
     state: latest
-- name: install docker for python
+    update_cache: true
+
+- name: Install Docker Module for Python
   pip:
     name: docker
 
-- name: start docker container
-  command: docker run -itd --name=ex1 ubuntu
-  ignore_errors: true
-# - name: Create a ex1 container
-#   docker_container:
-#     name: ex1
-#     image: ubuntu
-#     state: started
+- name: Pull default Docker image
+  community.docker.docker_image:
+    name: "{{ default_container_image }}"
+    source: pull
 
-- name: check the status docker container
-  command: docker ps -a
+- name: Create default containers
+  community.docker.docker_container:
+    name: "{{ default_container_name }}{{ item }}"
+    image: "{{ default_container_image }}"
+    command: "{{ default_container_command }}"
+    state: present
+  with_sequence: count={{ container_count }}
