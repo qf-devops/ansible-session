@@ -3,6 +3,10 @@
   apt:
     name: docker.io
     state: latest
+- name: install docker for python
+  pip:
+    name: docker
+    
 # - name: start docker container
 #   command: docker run -itd --name=ex1 ubuntu
 - name: Create a ex1 container
