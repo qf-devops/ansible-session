@@ -38,4 +38,4 @@
   pip:
     name: docker
 
-- include-playbook: container.yml
+- include-playbook: containers.yml
