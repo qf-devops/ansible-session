@@ -39,6 +39,5 @@
     name: docker
 - name: Include task list in play
   ansible.builtin.include: containers.yml
-  loop:
-  - "{{ services }}"
+  loop: "{{ services }}"
     
