@@ -1,0 +1,13 @@
+---
+- name: Create EC2 Instance
+  hosts: localhost
+  connection: local
+  gather_facts: False
+
+  
+  tasks:
+    - name: run custom module
+      my_test:
+       new: "true"
+       name: "hello"
+    
