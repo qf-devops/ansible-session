@@ -9,7 +9,7 @@ import os
 def run_module():
     module_args = dict(
         name=dict(type='str', required=True),
-        new=dict(type='bool', required=False, default=False)
+        state=dict(type='str', required=False, default=False)
     )
     result = dict(
         changed=False,
@@ -23,23 +23,23 @@ def run_module():
     )
 
 
-    if module.check_mode:
-        module.exit_json(**result)
+    # if module.check_mode:
+    #     module.exit_json(**result)
 
 
-    result['original_message'] = module.params['name']
-    result['message'] = 'goodbye'
+    # result['original_message'] = module.params['name']
+    # result['message'] = 'goodbye'
 
   
-    if module.params['new']:
-        result['changed'] = True
+    # if module.params['new']:
+    #     result['changed'] = True
 
 
-    if module.params['name'] == 'fail me':
-        module.fail_json(msg='You requested this to fail', **result)
+    # if module.params['name'] == 'fail me':
+    #     module.fail_json(msg='You requested this to fail', **result)
     
-    with open(module.params['name'], 'w') as fp:
-       pass
+    # with open(module.params['name'], 'w') as fp:
+    #    pass
     
     module.exit_json(**result)
 
