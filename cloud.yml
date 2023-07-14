@@ -6,12 +6,6 @@
   vars:
     st_type: running
   tasks:
-  - name: Install Docker Module for Python
-    apt:
-      name: python3-pip
-  - name: Install Docker Module for Python
-    pip:
-      name: boto  
   - name: create ec2 instance
     ec2:
       key_name: raviohio
