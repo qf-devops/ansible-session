@@ -10,14 +10,16 @@
   vars:
     st_type: present
   tasks:
-  - name: create ec2 instance
-    ec2:
-      key_name: raviohio
+  - name: start specific number of multiple instances
+    amazon.aws.ec2_instance:
       instance_type: t2.micro
-      image: ami-024e6efaf93d85776
-      wait: yes
-      group: webserver
+      image_id: ami-024e6efaf93d85776
       count: 1
-      vpc_subnet_id: subnet-09ff655fb2c442ab8
-      assign_public_ip: yes
-      state: "{{ st_type }}"
+      region: us-east-2
+      network:
+        assign_public_ip: true
+        security_group: default
+        vpc_subnet_id: subnet-09ff655fb2c442ab8
+      state: present
+      tags:
+        env: devo
