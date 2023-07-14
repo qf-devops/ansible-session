@@ -1,0 +1,9 @@
+---
+- name: Create EC2 Instance
+  hosts: localhost
+  connection: local
+  gather_facts: False
+  tasks:
+    - name: debug vars
+      debug:
+        msg: "print credentials {{ password }}"
