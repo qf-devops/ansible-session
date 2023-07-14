@@ -5,16 +5,16 @@
   gather_facts: False
 
   environment:
-    AWS_ACCESS_KEY_ID: "YOUR_ACCESS_KEY"
-    AWS_SECRET_ACCESS_KEY: "YOUR_SECRET_KEY"
-    AWS_DEFAULT_REGION: "us-east-1"
+    AWS_ACCESS_KEY_ID: "AKIA6CXQOFMVMCIQCW7T"
+    AWS_SECRET_ACCESS_KEY: "+aXBlUrYmr1jUjntOZmaI2nh5blqD0E3GfcmF40i"
+    AWS_DEFAULT_REGION: "us-east-2"
   vars:
-    region: "us-east-1"  # Update with your desired region
-    instance_type: "t2.micro"  # Update with your desired instance type
-    image_id: "ami-xxxxxxxxxxxxxxxxx"  # Update with the desired AMI ID
-    security_group: "my-security-group"  # Update with the desired security group name
-    key_pair: "my-key-pair"  # Update with the desired key pair name
-    subnet_id: "subnet-xxxxxxxxxxxxxx" 
+    region: "us-east-2"  
+    instance_type: "t2.micro"  
+    image_id: "ami-024e6efaf93d85776"  
+    security_group: "default"
+    key_pair: "raviohio"
+    subnet_id: "subnet-09ff655fb2c442ab8" 
   tasks:
     - name: Create EC2 Instance
       ec2:
