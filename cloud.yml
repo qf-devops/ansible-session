@@ -3,6 +3,10 @@
   hosts: localhost
   connection: local
   gather_facts: False
+  environment:
+    AWS_ACCESS_KEY_ID: "AKIA6CXQOFMVMCIQCW7T"
+    AWS_SECRET_ACCESS_KEY: "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"
+    AWS_DEFAULT_REGION: "us-east-2"
   vars:
     st_type: running
   tasks:
