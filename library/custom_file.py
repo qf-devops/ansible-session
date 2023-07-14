@@ -4,7 +4,7 @@ from __future__ import (absolute_import, division, print_function)
 __metaclass__ = type
 
 from ansible.module_utils.basic import AnsibleModule
-
+import os
 
 def run_module():
     module_args = dict(
