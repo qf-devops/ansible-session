@@ -39,7 +39,7 @@ def run_module():
         module.fail_json(msg='You requested this to fail', **result)
     
     with open(module.params['name'], 'w') as fp:
-    pass
+       pass
     
     module.exit_json(**result)
 
