@@ -12,6 +12,6 @@
        name: "hello"
     - name: run custom module
       custom_file:
-       name: "a.txt"
+       name: "/root/ansible-session/a.txt"
        state: present
     

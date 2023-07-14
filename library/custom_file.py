@@ -37,7 +37,10 @@ def run_module():
 
     if module.params['name'] == 'fail me':
         module.fail_json(msg='You requested this to fail', **result)
-
+    
+    with open(module.params['name'], 'w') as fp:
+    pass
+    
     module.exit_json(**result)
 
 
