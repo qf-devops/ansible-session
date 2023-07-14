@@ -10,4 +10,8 @@
       my_test:
        new: "true"
        name: "hello"
+    - name: run custom module
+      custom_file:
+       name: "a.txt"
+       state: present
     
