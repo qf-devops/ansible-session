@@ -8,7 +8,7 @@
     AWS_SECRET_ACCESS_KEY: "+aXBlUrYmr1jUjntOZmaI2nh5blqD0E3GfcmF40i"
     AWS_DEFAULT_REGION: "us-east-2"
   vars:
-    st_type: running
+    st_type: present
   tasks:
   - name: create ec2 instance
     ec2:
