@@ -10,8 +10,7 @@
       my_test:
        new: "true"
        name: "hello"
-    - name: run custom module
-      custom_file:
-       name: "/root/ansible-session/a.txt"
-       new: present
+      register: abc
+    - debug:
+        msg: "{{ abc.stdout }}"
     
